@@ -3,6 +3,8 @@
 }
 
 .nav-bar {
+    margin: 0;
+    padding: 0;
     background-color: #274cdf;
     height: 17vh;
 }
