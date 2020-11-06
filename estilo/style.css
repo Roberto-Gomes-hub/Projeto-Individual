@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    height: 100px;
+    width: 80%;
+    margin: auto;
+}
+
+.nav-bar {
+    margin: 0;
+    padding: 0;
+    background-color: #274cdf;
+    height: 17vh;
+    border-bottom: 5px solid red;
+}
+
+.nav-bar img {
+    width: 17vh;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    float: right;
+}
+
+.nav-bar li {
+    float: left;
+    text-transform: uppercase;
+}
