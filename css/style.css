@@ -17,20 +17,22 @@ a {
     margin: 0;
     padding: 0;
     background-color: #274cdf;
-    height: 17vh;
+    height: 15vh;
     border-bottom: 5px solid red;
 }
 
 .nav-bar img {
-    width: 17vh;
+    width: 15vh;
 }
 
 .nav-bar ul {
-    list-style-type: none;
     float: right;
+    text-transform: uppercase;
 }
 
 .nav-bar li {
+    list-style: none;
     float: left;
-    text-transform: uppercase;
+    padding: 6vh 3vw;
+    font-weight: 300;
 }
