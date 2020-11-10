@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 a {
@@ -28,11 +29,47 @@ a {
 .nav-bar ul {
     float: right;
     text-transform: uppercase;
+    padding: 0;
+    width: 65vw;
+    display: flex;
+    align-items: center;
 }
 
 .nav-bar li {
     list-style: none;
     float: left;
-    padding: 6vh 3vw;
-    font-weight: 300;
+    margin: 5vh 1vw;
+    padding: 1vh 2vw;
+    font-weight: 600;
+    font-size: 2vh;
+}
+
+.nav-bar li:hover {
+    background-color: red;
+    color: white;
+    border-radius: 10px 10px;
+}
+
+.banner {
+    height: 50vh;
+    background-image: url(../imagem/kobe.png);
+    background-color: #adadad8e;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    border-bottom: 5px solid red;
+}
+
+.banner .container-banner {
+    opacity: 1.5;
+    width: 40vw;
+    color: #ff0000;
+    font-size: 4vh;
+    font-weight: 900;
+    margin-left: 5vw;
+    padding-top: 7vh;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
 }
