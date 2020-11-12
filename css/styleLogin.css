@@ -1,3 +1,81 @@
 * {
     margin: 0;
+    font-family: bebas;
+}
+
+@font-face{
+    font-family: "bebas";
+    src: url(BebasNeue-Regular.otf);
+}
+
+.container {
+    height: 100px;
+    width: 80%;
+    margin: auto;
+}
+
+.nav-bar {
+    margin: 0;
+    padding: 0;
+    background-color: #274cdf;
+    height: 15vh;
+    border-bottom: 1vh solid #ffb81c;
+}
+
+.nav-bar img {
+    width: 15vh;
+}
+
+.nav-bar ul {
+    float: right;
+    text-transform: uppercase;
+    padding: 0;
+    margin-right: 15vw;
+}
+
+.nav-bar li {
+    list-style: none;
+    float: left;
+    margin: 5vh 1vw;
+    padding: 1vh 2vw;
+    font-weight: 600;
+    font-size: 3vh;
+}
+
+.nav-bar li:hover {
+    background-color: red;
+    color: white;
+    border-radius: 15px 15px;
+}
+
+.banner {
+    height: 59vh;
+    background-image: url(../imagem/james.png);
+    background-color: #adadad8e;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    padding-top: 25vh;
+    padding-left: 15vw;
+}
+
+.container-login {
+    width: 10vw;
+    text-align: center;
+}
+
+.box {
+    background-color: #5e192f;
+    border: 3px solid #ffb81c;
+    padding: 10vh 10vw;
+    width: 10vw;
+}
+
+.box h1 {
+    margin-top: -5vh;
+    font-size: 10vh;
+}
+
+.formulario {
+    margin-top: 5vh;
 }

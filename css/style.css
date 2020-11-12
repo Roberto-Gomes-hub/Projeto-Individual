@@ -40,9 +40,7 @@ a {
     float: right;
     text-transform: uppercase;
     padding: 0;
-    width: 58vw;
-    display: flex;
-    align-items: center;
+    margin-right: 15vw;
 }
 
 .nav-bar li {
