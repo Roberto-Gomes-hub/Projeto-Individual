@@ -1,11 +1,16 @@
 @font-face{
-    font-family: 'nba';
-    src: url(../css/NBA\ Bulls.ttf);
+    font-family: "vintage";
+    src: url(./MEDIO\ VINTAGE.otf);
+}
+
+@font-face{
+    font-family: "bebas";
+    src: url(BebasNeue-Regular.otf);
 }
 
 * {
     margin: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: bebas;
 }
 
 a {
@@ -24,7 +29,7 @@ a {
     padding: 0;
     background-color: #274cdf;
     height: 15vh;
-    border-bottom: 5px solid red;
+    border-bottom: 1vh solid red;
 }
 
 .nav-bar img {
@@ -35,7 +40,7 @@ a {
     float: right;
     text-transform: uppercase;
     padding: 0;
-    width: 65vw;
+    width: 58vw;
     display: flex;
     align-items: center;
 }
@@ -46,35 +51,60 @@ a {
     margin: 5vh 1vw;
     padding: 1vh 2vw;
     font-weight: 600;
-    font-size: 2vh;
+    font-size: 3vh;
 }
 
 .nav-bar li:hover {
     background-color: red;
     color: white;
-    border-radius: 10px 10px;
+    border-radius: 15px 15px;
 }
 
 .banner {
-    height: 84.3vh;
+    height: 84vh;
     background-image: url(../imagem/jordan.png);
     background-color: #adadad8e;
     background-size: cover;
     background-position-x: center;
     background-position-y: 20%;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: local;
 }
 
-.banner .container-banner {
+.container-banner {
     opacity: 1.5;
-    width: 40vw;
+    width: 35vw;
     color: #ff0000;
     font-size: 4vh;
-    font-weight: 900;
     margin-left: 5vw;
     padding-top: 7vh;
-    font-family: 'nba';
     /* -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #000; */
+}
+
+.container-banner h1 {
+    font-family: 'vintage';
+    font-size: 8vh;
+}
+
+.acesso {
+    float: right;
+    margin-right: 10vw;
+    margin-top: -30vh;
+}
+
+.acesso button {
+    width: 20vw;
+    height: 10vh;
+    background-color: red;
+    border: 2px solid red;
+    margin-top: 4vh;
+    font-size: 5vh;
+    transition-duration: 0.7s;
+    transition-property: color, background;
+}
+
+.acesso button:hover {
+    background-color: black;
+    color: red;
 }
