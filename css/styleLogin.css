@@ -54,13 +54,13 @@ a {
 }
 
 .banner {
-    height: 59vh;
+    height: 69vh;
     background-image: url(../imagem/james.png);
     background-color: #adadad8e;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    padding-top: 25vh;
+    padding-top: 15vh;
     padding-left: 15vw;
 }
 
@@ -69,28 +69,35 @@ a {
     text-align: center;
 }
 
-.box {
+.container-cadastro {
+    margin-top: -5vh;
+    margin-left: -5vw;
+    width: 10vw;
+    text-align: center;
+}
+
+.boxLogin {
     background-color: #5e192f;
     border: 0.7vh solid #ffb81c;
     padding: 10vh 10vw;
-    height: 25vh;
+    height: 30vh;
     width: 15vw;
 }
 
-.box h1 {
+.boxLogin h1 {
     margin-top: -5vh;
     font-size: 10vh;
 }
 
-.formulario {
+.formularioLogin {
     font-size: 3vh;
 }
 
-.formulario input {
-    width: 13vw;
+.formularioLogin input {
+    width: 15vw;
 }
 
-.formulario button {
+.formularioLogin button {
     font-size: 3vh;
     margin-top: 3vh;
     width: 13vw;
@@ -99,6 +106,41 @@ a {
     border: 0.4vh solid #000000;
 }
 
-.formulario button:hover {
+.formularioLogin button:hover {
+    background-color: #ffb81c;
+}
+
+.boxCad {
+    display: none;
+    background-color: #5e192f;
+    border: 0.7vh solid #ffb81c;
+    padding: 10vh 10vw;
+    height: 45vh;
+    width: 20vw;
+}
+
+.boxCad h1 {
+    margin-top: -5vh;
+    font-size: 10vh;
+}
+
+.formularioCad {
+    font-size: 3vh;
+}
+
+.formularioCad input {
+    width: 18vw;
+}
+
+.formularioCad button {
+    font-size: 3vh;
+    margin-top: 3vh;
+    width: 13vw;
+    height: 5vh;
+    background-color: #5e192f;
+    border: 0.4vh solid #000000;
+}
+
+.formularioCad button:hover {
     background-color: #ffb81c;
 }

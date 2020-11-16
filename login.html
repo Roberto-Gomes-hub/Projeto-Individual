@@ -25,10 +25,11 @@
     <!-- BANNER -->
     <div class="banner">
         <div class="container-login">
-            <div class="box">
+            <div class="boxLogin" id="boxEntrar">
                 <h1>Login</h1>
-                <div class="formulario">
+                <div class="formularioLogin">
                     <label>Email:</label> 
+                    <br>
                     <input id="email" type="email" placeholder="exemplo@exemplo.com">
                     <br>
                     <label>Senha:</label> 
@@ -36,9 +37,46 @@
                     <input id="senha" type="password">
                     <br>
                     <button>Entrar</button>
+                    <button style="margin-top: 1vh;" onclick="MostrarCadastro()">Cadastro</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-cadastro">
+            <div class="boxCad" id="boxCadastro">
+                <h1>Cadastrar</h1>
+                <div class="formularioCad">
+                    <label>Usuário:</label> 
+                    <br>
+                    <input id="user" type="password">
+                    <br>
+                    <label>Email:</label> 
+                    <br>
+                    <input id="email" type="email" placeholder="exemplo@exemplo.com">
+                    <br>
+                    <label>Senha:</label> 
+                    <br>
+                    <input id="senha" type="password">
+                    <br>
+                    <label>Confirmar Senha:</label> 
+                    <br>
+                    <input id="confSenha" type="password">
+                    <br>
+                    <button>Cadastrar</button>
+                    <button style="margin-top: 1vh;" onclick="MostrarLogin()">Login</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+<script>
+    function MostrarCadastro() {
+        boxCadastro.style.display = "block";
+        boxEntrar.style.display = "none";
+    }
+
+    function MostrarLogin() {
+        boxCadastro.style.display = "none";
+        boxEntrar.style.display = "block";
+    }
+</script>
