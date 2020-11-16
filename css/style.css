@@ -64,9 +64,9 @@ a {
     background-color: #adadad8e;
     background-size: cover;
     background-position-x: center;
-    background-position-y: 20%;
+    background-position-y: -50%;
     background-repeat: no-repeat;
-    background-attachment: local;
+    background-attachment: fixed;
 }
 
 .container-banner {
