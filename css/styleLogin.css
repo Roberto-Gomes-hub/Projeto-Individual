@@ -8,6 +8,18 @@
     src: url(BebasNeue-Regular.otf);
 }
 
+@keyframes appear {
+    from {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .container {
     height: 100px;
     width: 80%;
@@ -67,6 +79,10 @@ a {
 .container-login {
     width: 10vw;
     text-align: center;
+}
+
+#boxEntrar, #boxCadastro{
+    animation: appear 1s;
 }
 
 .container-cadastro {

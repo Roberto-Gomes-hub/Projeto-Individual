@@ -13,14 +13,18 @@
     font-family: bebas;
 }
 
+body {
+    background-color: black;
+}
+
 a {
     text-decoration: none;
     color: white;
 }
 
 .container {
-    height: 100px;
-    width: 80%;
+    height: 15vh;
+    width: 80vw;
     margin: auto;
 }
 
@@ -59,14 +63,14 @@ a {
 }
 
 .banner {
-    height: 84vh;
+    height: 100vh;
     background-image: url(../imagem/jordan.png);
-    background-color: #adadad8e;
+    background-color: black;
     background-size: cover;
     background-position-x: center;
-    background-position-y: -50%;
+    background-position-y: 40%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 .container-banner {
@@ -105,4 +109,37 @@ a {
 .acesso button:hover {
     background-color: black;
     color: red;
+}
+
+.legenda {
+    height: 5vh;
+    width: 80vw;
+    margin: 2vh auto;
+    text-align: center;
+    padding: 10vh;
+}
+
+.legenda hr, h2 {
+    float: left;
+}
+
+.legenda hr {
+    width: 26vw;
+    margin-top: 2vh;
+}
+
+.legenda h2 {
+    color: red;
+    width: 27vw;
+}
+
+.card-left {
+    height: 20vh;
+    width: 60vw;
+    margin: 2vh auto;
+    text-align: center;
+}
+
+.card-left img {
+    height: 20vh;
 }
