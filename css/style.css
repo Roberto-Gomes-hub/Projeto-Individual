@@ -131,15 +131,22 @@ a {
 .legenda h2 {
     color: red;
     width: 27vw;
+    font-size: 4vh;
 }
 
 .card-left {
     height: 20vh;
     width: 60vw;
-    margin: 2vh auto;
+    margin: 2vh 10vw;
     text-align: center;
+    border: 0.7vh solid red;
+    border-radius: 3vh 3vh;
+    color: white;
 }
 
 .card-left img {
     height: 20vh;
+    float: left;
+    border-top-left-radius: 2vh;
+    border-bottom-left-radius: 2vh;
 }

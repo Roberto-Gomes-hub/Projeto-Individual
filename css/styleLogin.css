@@ -111,6 +111,7 @@ a {
 
 .formularioLogin input {
     width: 15vw;
+    height: 2vh;
 }
 
 .formularioLogin button {
@@ -146,6 +147,7 @@ a {
 
 .formularioCad input {
     width: 18vw;
+    height: 2vh;
 }
 
 .formularioCad button {
