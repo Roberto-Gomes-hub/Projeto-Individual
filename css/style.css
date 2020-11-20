@@ -139,14 +139,69 @@ a {
     width: 60vw;
     margin: 2vh 10vw;
     text-align: center;
-    border: 0.7vh solid red;
-    border-radius: 3vh 3vh;
-    color: white;
+    border: 1vh solid red;
+    border-radius: 4.1vh;
+    color: black;
+    background-color: white;
 }
 
 .card-left img {
     height: 20vh;
     float: left;
-    border-top-left-radius: 2vh;
-    border-bottom-left-radius: 2vh;
+    border-top-left-radius: 3vh;
+    border-bottom-left-radius: 3vh;
+}
+
+.card-left h1 {
+    margin-top: 1vh;
+}
+
+.card-left h3 {
+    margin-top: 2vh;
+}
+
+.card-right {
+    height: 20vh;
+    width: 60vw;
+    margin: 5vh 25vw;
+    text-align: center;
+    border: 1vh solid red;
+    border-radius: 4.1vh;
+    color: black;
+    background-color: white;
+}
+
+.card-right img {
+    height: 20vh;
+    float: right;
+    border-top-right-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+}
+
+.card-right h1 {
+    margin-top: 1vh;
+}
+
+.card-right h3 {
+    margin-top: 2vh;
+}
+
+.footer {
+    border-top: 1vh solid red;
+    margin-top: 10vh;
+    height: 19vh;
+    background-color: #274cdf;
+    color: black;
+}
+
+.footer img {
+    margin-top: -13vh;
+    height: 19vh;
+    float: right;
+}
+
+.contato {
+    margin: 1vh 2vw;
+    float: left;
+    width: 10vw;
 }
