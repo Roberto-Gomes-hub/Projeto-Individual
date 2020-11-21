@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleLogin.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <div class="nav-bar">
+        <div class="container">
+            <img src="imagem/nba.png" alt="" style="float: left;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Principais Jogadores</a></li>
+                <li><a href="">Sneakers</a></li>
+                <li><a href="">Sobre mim</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- FIM DA NAVBAR -->
+
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="container-login">
+            <div class="boxLogin" id="boxEntrar" enabled>
+                <h1>Login</h1>
+                <div class="formularioLogin">
+                    <form id="form_login" method="post" onsubmit="return entrar()">
+                        <label>Email:</label> 
+                        <br>
+                        <input id="email" type="email" placeholder="exemplo@exemplo.com">
+                        <br>
+                        <label>Senha:</label> 
+                        <br>
+                        <input id="senha" type="password">
+                        <br>
+                        <button>Entrar</button>
+                    </form>
+                    <button style="margin-top: 1vh;" onclick="MostrarCadastro()">Cadastro</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-cadastro">
+            <div class="boxCad" id="boxCadastro" disabled>
+                <h1>Cadastrar</h1>
+                <div class="formularioCad">
+                    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                        <label>Usuário:</label> 
+                        <br>
+                        <input id="user" name="nome">
+                        <br>
+                        <label>Email:</label> 
+                        <br>
+                        <input id="email" type="email" name="email" placeholder="exemplo@exemplo.com">
+                        <br>
+                        <label>Senha:</label> 
+                        <br>
+                        <input id="senha" type="password" name="senha">
+                        <br>
+                        <label>Confirmar Senha:</label> 
+                        <br>
+                        <input id="confSenha" type="password">
+                        <br>
+                        <button>Cadastrar</button>
+                    </form>
+                    <button style="margin-top: 1vh;" onclick="MostrarLogin()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function MostrarCadastro() {
+        boxCadastro.style.display = "block";
+        boxEntrar.style.display = "none";
+        boxCadastro.disabled = false;
+        boxEntrar.disabled = true;
+    }
+
+    function MostrarLogin() {
+        boxCadastro.style.display = "none";
+        boxEntrar.style.display = "block";
+        boxCadastro.disabled = true;
+        boxEntrar.disabled = false;
+    }
+
+    function entrar() {
+        // aguardar();
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.login_usuario_meuapp = json.email;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+
+                    window.location.href = 'sobre.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.visibility = 'visible';
+        div_erro.style.visibility = 'hidden';
+    }
+
+    function finalizar_aguardar(resposta) {
+        btn_entrar.disabled = false;
+        img_aguarde.style.visibility = 'hidden';
+        div_erro.style.visibility = 'visible';
+        div_erro.innerHTML = resposta;
+    }
+
+    function cadastrar() {
+        aguardarCad();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardarCad();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardarCad() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardarCad() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
+
+
+</script>
