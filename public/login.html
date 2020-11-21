@@ -31,11 +31,11 @@
                     <form id="form_login" method="post" onsubmit="return entrar()">
                         <label>Email:</label> 
                         <br>
-                        <input id="email" type="email" placeholder="exemplo@exemplo.com">
+                        <input id="email" type="email" name="login" placeholder="exemplo@exemplo.com">
                         <br>
                         <label>Senha:</label> 
                         <br>
-                        <input id="senha" type="password">
+                        <input id="senha" type="password" name="senha">
                         <br>
                         <button>Entrar</button>
                     </form>
@@ -54,7 +54,7 @@
                         <br>
                         <label>Email:</label> 
                         <br>
-                        <input id="email" type="email" name="email" placeholder="exemplo@exemplo.com">
+                        <input id="email" type="email" name="login" placeholder="exemplo@exemplo.com">
                         <br>
                         <label>Senha:</label> 
                         <br>
@@ -103,7 +103,7 @@
                     sessionStorage.login_usuario_meuapp = json.email;
                     sessionStorage.nome_usuario_meuapp = json.nome;
 
-                    window.location.href = 'sobre.html';
+                    window.location.href = 'jogadores.html';
                 });
 
             } else {
@@ -134,7 +134,7 @@
     }
 
     function cadastrar() {
-        aguardarCad();
+        // aguardarCad();
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -142,8 +142,8 @@
         }).then(function (response) {
             
             if (response.ok) {
-
-                window.location.href='login.html';
+                alert('Cadastro realizado com sucesso!');
+                MostrarLogin();
 
             } else {
 
@@ -151,7 +151,7 @@
                 response.text().then(function (resposta) {
                     div_erro.innerHTML = resposta;
                 });
-                finalizar_aguardarCad();
+                // finalizar_aguardarCad();
             }
         });
 
