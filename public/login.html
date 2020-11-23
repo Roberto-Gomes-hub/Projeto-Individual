@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleLogin.css">
-    <title>Document</title>
+    <title>Tudo sobre NBA</title>
 </head>
 <body>
 
@@ -13,10 +13,10 @@
         <div class="container">
             <img src="imagem/nba.png" alt="" style="float: left;">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Principais Jogadores</a></li>
-                <li><a href="">Sneakers</a></li>
-                <li><a href="">Sobre mim</a></li>
+                <a href="index.html"><li>Home</li></a>
+                <a href=""><li>Principais Jogadores</li></a>
+                <a href=""><li>Sneakers</li></a>
+                <a href=""><li>Sobre mim</li></a>
             </ul>
         </div>
     </div>
@@ -37,7 +37,7 @@
                         <br>
                         <input id="senha" type="password" name="senha">
                         <br>
-                        <button>Entrar</button>
+                        <button id="btn_entrar">Entrar</button>
                     </form>
                     <button style="margin-top: 1vh;" onclick="MostrarCadastro()">Cadastro</button>
                 </div>
@@ -64,11 +64,12 @@
                         <br>
                         <input id="confSenha" type="password">
                         <br>
-                        <button>Cadastrar</button>
+                        <button id="btn_cadastro">Cadastrar</button>
                     </form>
                     <button style="margin-top: 1vh;" onclick="MostrarLogin()">Login</button>
                 </div>
             </div>
+            <img id="img_aguarde" src="https://i.gifer.com/3vND.gif" alt="" style="float: right; width: 25vw; margin-right: -46vw; margin-top: -40vh; visibility: hidden;">
         </div>
     </div>
 </body>
@@ -89,7 +90,7 @@
     }
 
     function entrar() {
-        // aguardar();
+        aguardar();
         var formulario = new URLSearchParams(new FormData(form_login));
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -112,7 +113,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    // finalizar_aguardar(texto);
+                    finalizar_aguardar(texto);
                 });
             }
         });
@@ -123,18 +124,18 @@
     function aguardar() {
         btn_entrar.disabled = true;
         img_aguarde.style.visibility = 'visible';
-        div_erro.style.visibility = 'hidden';
+        // div_erro.style.visibility = 'hidden';
     }
 
     function finalizar_aguardar(resposta) {
         btn_entrar.disabled = false;
         img_aguarde.style.visibility = 'hidden';
-        div_erro.style.visibility = 'visible';
-        div_erro.innerHTML = resposta;
+        // div_erro.style.visibility = 'visible';
+        // div_erro.innerHTML = resposta;
     }
 
     function cadastrar() {
-        // aguardarCad();
+        aguardarCad();
         var formulario = new URLSearchParams(new FormData(form_cadastro));
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -151,7 +152,7 @@
                 response.text().then(function (resposta) {
                     div_erro.innerHTML = resposta;
                 });
-                // finalizar_aguardarCad();
+                finalizar_aguardarCad();
             }
         });
 
@@ -159,13 +160,13 @@
     }
 
     function aguardarCad() {
-        btn_entrar.disabled = true;
+        btn_cadastro.disabled = true;
         img_aguarde.style.display='block';
         div_erro.style.display='none';
     }
 
     function finalizar_aguardarCad() {
-        btn_entrar.disabled = false;
+        btn_cadastro.disabled = false;
         img_aguarde.style.display='none';
         div_erro.style.display='block';
     }

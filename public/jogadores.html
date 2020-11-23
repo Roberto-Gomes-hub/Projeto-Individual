@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tudo sobre NBA</title>
+    <script type="text/javascript" src="funcoes.js"></script>
+    <link rel="stylesheet" href="css/styleJogadores.css">
 </head>
-<body>
+<script>
+
+    let usuario;
+
+    verificar_autenticacao();
+
     
+</script>
+<body onload="verificar_autenticacao()">
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <div class="nav-bar">
+        <div class="container">
+            <img src="imagem/nba.png" alt="" style="float: left;">
+            <ul>
+                <li>Olá, <b id="b_usuario"></b></li>
+                <li>Principais Jogadores</li>
+                <li>Sneakers</li>
+                <li>Sobre mim</li>
+                <li><a href="" onclick="logoff()">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- FIM DA NAVBAR -->
 </body>
 </html>
