@@ -62,7 +62,7 @@ a {
 .nav-bar li:hover {
     background-color: red;
     color: white;
-    border-radius: 15px 15px;
+    border-radius: 5vh;
 }
 
 .banner {
@@ -161,4 +161,24 @@ a {
 
 .formularioCad button:hover {
     background-color: #ffb81c;
+}
+
+.footer {
+    border-top: 1vh solid red;
+    margin-top: 10vh;
+    height: 19vh;
+    background-color: #274cdf;
+    color: black;
+}
+
+.footer img {
+    height: 19vh;
+    float: right;
+}
+
+.contato {
+    margin: 1vh 2vw;
+    float: left;
+    width: 10vw;
+    font-size: 2.5vh;
 }

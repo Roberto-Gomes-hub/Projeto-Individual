@@ -24,7 +24,7 @@
 
 a {
     text-decoration: none;
-    color: black;
+    color: transparent;
 }
 
 .nav-bar img {
@@ -45,6 +45,7 @@ a {
     padding: 1vh 2vw;
     font-weight: 600;
     font-size: 3vh;
+    color: black;
 }
 
 .nav-bar li:hover {
@@ -53,10 +54,20 @@ a {
     border-radius: 5vh;
 }
 
+.banner {
+    height: 84vh;
+    background-image: url(../imagem/wall-sobre.jpg);
+    background-color: black;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
 .footer {
     border-top: 1vh solid red;
-    margin-top: 10vh;
-    height: 19vh;
+    height: 20vh;
     background-color: #274cdf;
     color: black;
 }
@@ -67,7 +78,7 @@ a {
 }
 
 .contato {
-    margin: 1vh 2vw;
+    margin-left: 2vw;
     float: left;
     width: 10vw;
     font-size: 2.5vh;

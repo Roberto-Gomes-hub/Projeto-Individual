@@ -59,7 +59,7 @@ a {
 .nav-bar li:hover {
     background-color: red;
     color: white;
-    border-radius: 15px 15px;
+    border-radius: 5vh;
 }
 
 .banner {
@@ -183,7 +183,7 @@ a {
 }
 
 .card-right h3 {
-    margin-top: 2vh;
+    margin-top: 3vh;
 }
 
 .footer {
@@ -195,7 +195,6 @@ a {
 }
 
 .footer img {
-    margin-top: -13vh;
     height: 19vh;
     float: right;
 }
@@ -204,4 +203,5 @@ a {
     margin: 1vh 2vw;
     float: left;
     width: 10vw;
+    font-size: 2.5vh;
 }

@@ -40,6 +40,7 @@
                         <button id="btn_entrar">Entrar</button>
                     </form>
                     <button style="margin-top: 1vh;" onclick="MostrarCadastro()">Cadastro</button>
+                    <div id="div_erro"></div>
                 </div>
             </div>
         </div>
@@ -67,10 +68,24 @@
                         <button id="btn_cadastro">Cadastrar</button>
                     </form>
                     <button style="margin-top: 1vh;" onclick="MostrarLogin()">Login</button>
+                    <div id="div_erroCad"></div>
                 </div>
             </div>
             <img id="img_aguarde" src="https://i.gifer.com/3vND.gif" alt="" style="float: right; width: 25vw; margin-right: -46vw; margin-top: -40vh; visibility: hidden;">
         </div>
+    </div>
+    <!-- FIM BANNER -->
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="contato">
+            <h2>Contato</h2> <br>
+            (11)943603087 <br>
+            roberto.luiz@bandtec.com.br <br>
+            Rua Alberto Torres, 31 SBC
+        </div>
+        <span style="margin: 10vh 35vw 0 30vw; float: left;">Roberto Gomes &COPY; 2020 Bandtec</span>
+        <img src="imagem/nba.png">
     </div>
 </body>
 </html>
@@ -124,14 +139,14 @@
     function aguardar() {
         btn_entrar.disabled = true;
         img_aguarde.style.visibility = 'visible';
-        // div_erro.style.visibility = 'hidden';
+        div_erro.style.visibility = 'hidden';
     }
 
     function finalizar_aguardar(resposta) {
         btn_entrar.disabled = false;
         img_aguarde.style.visibility = 'hidden';
-        // div_erro.style.visibility = 'visible';
-        // div_erro.innerHTML = resposta;
+        div_erro.style.visibility = 'visible';
+        div_erro.innerHTML = resposta;
     }
 
     function cadastrar() {
@@ -150,7 +165,7 @@
 
                 console.log('Erro de cadastro!');
                 response.text().then(function (resposta) {
-                    div_erro.innerHTML = resposta;
+                    div_erroCad.innerHTML = resposta;
                 });
                 finalizar_aguardarCad();
             }
@@ -161,14 +176,14 @@
 
     function aguardarCad() {
         btn_cadastro.disabled = true;
-        img_aguarde.style.display='block';
-        div_erro.style.display='none';
+        img_aguarde.style.visibility='visible';
+        div_erroCad.style.visibility = 'hidden';
     }
 
     function finalizar_aguardarCad() {
         btn_cadastro.disabled = false;
-        img_aguarde.style.display='none';
-        div_erro.style.display='block';
+        img_aguarde.style.visibility = 'hidden';
+        div_erroCad.style.visibility = 'visible';
     }
 
 
