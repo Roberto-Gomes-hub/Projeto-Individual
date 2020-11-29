@@ -53,22 +53,6 @@ a {
     border-radius: 5vh;
 }
 
-#no_change:hover {
-    background-color: #274cdf;
-    color: black;
-}
-
-.banner {
-    height: 84vh;
-    background-image: url(../imagem/wall-jogadores.jpg);
-    background-color: black;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: 50%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-}
-
 .footer {
     border-top: 1vh solid red;
     height: 20vh;

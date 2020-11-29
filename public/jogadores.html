@@ -15,13 +15,13 @@
 
     
 </script>
-<body onload="verificar_autenticacao()">
+<body onload="start()">
     <!-- BARRA DE NAVEGAÇÃO -->
     <div class="nav-bar">
         <div class="container">
             <img src="imagem/nba.png" alt="" style="float: left;">
             <ul>
-                <li>Olá, <b id="b_usuario"></b></li>
+                <li id="no_change">Olá, <b id="b_usuario"></b></li>
                 <a href="jogadores.html"><li>Principais Jogadores</li></a>
                 <a href="sneakers.html"><li>Sneakers</li></a>
                 <a href="sobre.html"><li>Sobre mim</li></a>
@@ -30,6 +30,14 @@
         </div>
     </div>
     <!-- FIM DA NAVBAR -->
+
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="container-banner">
+            
+        </div>
+    </div>
+    <!-- FIM BANNER -->
 
     <!-- FOOTER -->
     <div class="footer">
@@ -44,3 +52,36 @@
     </div>
 </body>
 </html>
+<script>
+    function start() {
+        // verificar_escolha();
+        verificar_autenticacao();
+    }
+
+    // function verificar_escolha() {
+    //     fetch("/escolhas/verificar", {
+    //         method: "POST"
+    //     }).then(resposta => {
+
+    //         if (resposta.ok) {
+
+    //             resposta.json().then(json => {
+
+    //                 console.log('até aqui foi')
+    //                 sessionStorage.nome_jogador_meuapp = json.nomeJogador;
+    //                 sessionStorage.foto_jogador_meuapp = json.fotoJogador;
+    //             });
+
+    //         } else {
+
+    //             console.log('Erro!');
+
+    //             resposta.text().then(texto => {
+    //                 console.error(texto);
+    //             });
+    //         }
+    //     });
+
+    //     return false;
+    // }
+</script>
