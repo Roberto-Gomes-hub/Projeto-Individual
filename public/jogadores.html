@@ -21,7 +21,7 @@
         <div class="container">
             <img src="imagem/nba.png" alt="" style="float: left;">
             <ul>
-                <li>Olá, <b id="b_usuario"></b></li>
+                <li id="no_change">Olá, <b id="b_usuario"></b></li>
                 <a href="jogadores.html"><li>Principais Jogadores</li></a>
                 <a href="sneakers.html"><li>Sneakers</li></a>
                 <a href="sobre.html"><li>Sobre mim</li></a>
@@ -30,6 +30,151 @@
         </div>
     </div>
     <!-- FIM DA NAVBAR -->
+
+    <!-- BANNER -->
+    <div class="banner">
+        <div class="container_banner" id="container">
+            <button onclick="selecao()">Selecionar Jogador</button>
+            <div id="escolhaJogadores" style="display: none;">
+                <div id="pag1">
+                    <div id="cardLebron" class="card" onclick="noticiasLB()">
+                        <img src="imagem/lebron.png">
+                        LeBron James
+                    </div>
+                    <div id="cardKyrie" class="card">
+                        <img src="imagem/kyrie.jpg">
+                        Kyrie Irving
+                    </div>
+                    <div id="cardCurry" class="card">
+                        <img src="imagem/curry.jpg">
+                        Stephen Curry
+                    </div>
+                    <div id="cardHarden" class="card" onclick="noticiasHarden()">
+                        <img src="imagem/harden.jpg">
+                        James Harden
+                    </div>
+                    <div id="cardCP3" class="card">
+                        <img src="imagem/cp3.jpg">
+                        Chris Paul
+                    </div>    
+                </div>
+                
+                <div id="pag2" style="display: none;">
+                    <div id="cardAnthony" class="card">
+                        <img src="imagem/anthony.png">
+                        Anthony Davis
+                    </div>
+                    <div id="cardSmith" class="card" onclick="smith()">
+                        <img src="imagem/smith.png">
+                        J. R. Smith
+                    </div>
+                    <div id="cardRondo" class="card">
+                        <img src="imagem/rondo.png">
+                        Rajon Rondo
+                    </div>
+                    <div id="cardKD" class="card">
+                        <img src="imagem/KD.png">
+                        Kevin Durant
+                    </div>
+                    <div id="cardGiannis" class="card">
+                        <img src="imagem/giannis.png">
+                        Giannis A.
+                    </div>  
+                </div>
+
+                <div id="pag3" style="display: none;">
+                    <div id="cardKlay" class="card">
+                        <img src="imagem/klay.png">
+                        Klay Thompson
+                    </div>
+                    <div id="cardWestbrook" class="card">
+                        <img src="imagem/westbrook.jpg">
+                        R. Westbrook
+                    </div>
+                    <div id="cardButler" class="card">
+                        <img src="imagem/butler.png">
+                        Jimmy Butler
+                    </div>
+                    <div id="cardJaylen" class="card">
+                        <img src="imagem/brown.png">
+                        Jaylen Brown
+                    </div>
+                    <div id="cardLamelo" class="card">
+                        <img src="imagem/lamelo.png">
+                        Lamelo Ball
+                    </div>  
+                </div>
+
+                <div style="float: left; margin-left: 29vw;">
+                    <span id="um" onclick="change1()">1</span>
+                    <span id="dois" onclick="change2()">2</span>
+                    <span id="tres" onclick="change3()">3</span>
+                </div>
+            </div>
+        </div>
+        <div class="container_noticia" id="noticiaLB">
+            <div class="noticia">
+                
+                <div class="card_Noticia" style="margin-left: 0;">
+                    <h1>LeBron James faz homenagem à mãe após passeio de barco: "É minha vez de retribuir"</h1>
+                    <br>
+                    <h4>Astro dos Lakers ressaltou luta de sua mãe, Gloria, para que tivesse sucesso</h4>
+                    <img src="https://instagram.fcgh3-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s750x750/125428018_368312957813168_8366978189860342156_n.jpg?_nc_ht=instagram.fcgh3-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=lMWGaqhUJ3IAX97rcUa&tp=1&oh=c9eb34a036eb910c484bec72a2fc34fc&oe=5FEFA966" alt="">
+                    <h3 style="float: left; margin-top: 2vh;">15/11/2020</h3> <a href="https://globoesporte.globo.com/basquete/nba/noticia/lebron-james-faz-homenagem-a-mae-apos-passeio-de-barco-e-minha-vez-de-retribuir.ghtml" style="text-decoration: none; color: white; float: right;  margin-top: 2vh;"><u>Veja Mais &curvearrowright;</u></a>
+                </div>
+
+                <div class="card_Noticia">
+                    <h1>LeBron James busca ajuda para solucionar morte de irmã de scout dos Cavaliers</h1>
+                    <br>
+                    <h4>Astro pediu auxílio nas redes sociais, a fim de encontrar o assassino de Ericka Weems</h4>
+                    <img src="https://www.theplayoffs.com.br/wp-content/uploads/2018/03/lebron-james-cleveland-cavaliers-1-768x492.jpg" alt="" style="width: 19vw; margin-left: 1vw;">
+                    <h3 style="float: left; margin-top: 2vh;">05/11/2020</h3> <a href="https://www.theplayoffs.com.br/nba/lebron-james-busca-ajuda-para-solucionar-morte-de-irma-de-scout-dos-cavaliers/" style="text-decoration: none; color: white; float: right;  margin-top: 2vh;"><u>Veja Mais &curvearrowright;</u></a>
+                </div>
+
+                <div class="card_Noticia">
+                    <h1>Trump volta atacar LeBron e vibra com coro de ofensa do público ao astro em comício</h1>
+                    <br>
+                    <h4>Depois de chamar o astro dos Lakers de "desagradável porta-voz do Partido Democrata", presidente dos Estados Unidos critica audiência da NBA e alfineta jogador dos Lakers: "Me senti mal pelo LeBron"</h4>
+                    <img src="https://s2.glbimg.com/xVCAMdP7I0zfjO8MCo_myO2y3YU=/0x0:3165x2110/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/w/c/74LZr6RAOi9aW5S3gA2g/gettyimages-1279430176.jpg" alt="" style="width: 19vw; margin-left: 1vw;">
+                    <h3 style="float: left; margin-top: 2vh;">02/11/2020</h3> <a href="https://globoesporte.globo.com/basquete/nba/noticia/trump-volta-atacar-lebron-e-vibra-com-coro-de-ofensa-do-publico-ao-astro-em-comicio.ghtml" style="text-decoration: none; color: white; float: right;  margin-top: 2vh;"><u>Veja Mais &curvearrowright;</u></a>
+                </div>
+
+            </div>
+            <h1 style="float: right; margin-top: 5vh;"><u onclick="voltar()">Voltar &curvearrowleft;</u></h1>
+        </div>
+
+        <div class="container_noticia" id="noticiaHarden">
+            <div class="noticia">
+                
+                <div class="card_Noticia" style="margin-left: 0;">
+                    <h1>James Harden teria recusado oferta de R$ 270 milhões por ano para seguir no Houston Rockets</h1>
+                    <br>
+                    <h4>Barba estaria decidido a jogar pelos Nets, mas franquias não estariam nem perto de um acordo</h4>
+                    <img src="https://s2.glbimg.com/XzAhZYQWC570jHUJhM6XIRx7D-A=/0x0:1024x709/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2020/V/d/DDS3MDQSGF05JUHujfbg/gettyimages-1269973465.jpg" alt="" style="width: 19vw; margin-left: 1vw;">
+                    <h3 style="float: left; margin-top: 2vh;">17/11/2020</h3> <a href="https://globoesporte.globo.com/basquete/nba/noticia/james-harden-teria-recusado-oferta-de-r-270-milhoes-por-ano-para-seguir-no-houston-rockets.ghtml" style="text-decoration: none; color: white; float: right;  margin-top: 2vh;"><u>Veja Mais &curvearrowright;</u></a>
+                </div>
+
+                <div class="card_Noticia">
+                    <h1>NBA: James Harden e Russell Westbrook se preocupam com rumo do Houston Rockets</h1>
+                    <br>
+                    <h4>Houston Rockets já está passando por grandes mudanças durante a offseason, mas um novo desafio surge para a franquia</h4>
+                    <img src="https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F1111%2Fr774216_1296x729_16%2D9.jpg&w=570&format=jpg" alt="" style="width: 19vw; margin-left: 1vw;">
+                    <h3 style="float: left; margin-top: 2vh;">11/11/2020</h3> <a href="https://www.espn.com.br/nba/artigo/_/id/7732065/nba-james-harden-e-russell-westbrook-se-preocupam-com-rumo-do-houston-rockets" style="text-decoration: none; color: white; float: right;  margin-top: 2vh;"><u>Veja Mais &curvearrowright;</u></a>
+                </div>
+
+                <div class="card_Noticia">
+                    <h1>Philadelphia 76ers está interessado em James Harden</h1>
+                    <br>
+                    <h4>Daryl Morey, que levou Harden para os Rockets, agora é dirigente dos Sixers; negócio é complicado e time de Houston não quer negociar seu astro</h4>
+                    <img src="https://www.theplayoffs.com.br/wp-content/uploads/2019/12/james-harden-rockets-spurs-2019-scaled-e1576598845601.jpg" alt="" style="width: 19vw; margin-left: 1vw;">
+                    <h3 style="float: left; margin-top: 2vh;">03/11/2020</h3> <a href="https://www.theplayoffs.com.br/nba/philadelphia-76ers-esta-interessado-em-james-harden/" style="text-decoration: none; color: white; float: right;  margin-top: 2vh;"><u>Veja Mais &curvearrowright;</u></a>
+                </div>
+
+            </div>
+            <h1 style="float: right; margin-top: 5vh;"><u onclick="voltar()">Voltar &curvearrowleft;</u></h1>
+        </div>
+    </div>
+    <!-- FIM BANNER -->
 
     <!-- FOOTER -->
     <div class="footer">
@@ -44,3 +189,107 @@
     </div>
 </body>
 </html>
+<script>
+    change1();
+
+    function selecao() {
+        if (escolhaJogadores.style.display == 'block') {
+            escolhaJogadores.style.display = 'none';
+        }
+        else if (escolhaJogadores.style.display == 'none') {
+            escolhaJogadores.style.display = 'block';
+        }
+    }
+
+    function smith() {
+        window.location.href = 'https://www.youtube.com/watch?v=1inxvYwAvnY';
+    }
+
+    function change1() {
+        um.style.textDecoration = 'Underline';
+        um.style.fontWeight = 'bold';
+        dois.style.textDecoration = 'none';
+        dois.style.fontWeight = 'none';
+        tres.style.textDecoration = 'none';
+        tres.style.fontWeight = 'none';
+        pag1.style.display = 'block';
+        pag2.style.display = 'none';
+        pag3.style.display = 'none';
+        um.style.color = 'black';
+        dois.style.color = 'white';
+        tres.style.color = 'white';
+    }
+
+    function change2() {
+        um.style.textDecoration = 'none';
+        um.style.fontWeight = 'none';
+        dois.style.textDecoration = 'Underline';
+        dois.style.fontWeight = 'bold';
+        tres.style.textDecoration = 'none';
+        tres.style.fontWeight = 'none';
+        pag1.style.display = 'none';
+        pag2.style.display = 'block';
+        pag3.style.display = 'none';
+        um.style.color = 'white';
+        dois.style.color = 'black';
+        tres.style.color = 'white';
+    }
+
+    function change3() {
+        um.style.textDecoration = 'none';
+        um.style.fontWeight = 'none';
+        dois.style.textDecoration = 'none';
+        dois.style.fontWeight = 'none';
+        tres.style.textDecoration = 'Underline';
+        tres.style.fontWeight = 'bold';
+        pag1.style.display = 'none';
+        pag2.style.display = 'none';
+        pag3.style.display = 'block';
+        um.style.color = 'white';
+        dois.style.color = 'white';
+        tres.style.color = 'black';
+    }
+
+    function noticiasLB() {
+        container.style.display = 'none';
+        noticiaLB.style.display = 'block';
+    }
+
+    function noticiasHarden() {
+        container.style.display = 'none';
+        noticiaHarden.style.display = 'block';
+    }
+
+    function voltar() {
+        container.style.display = 'block';
+        noticiaLB.style.display = 'none';
+        noticiaHarden.style.display = 'none'
+    }
+
+    // function verificar_escolha() {
+    //     fetch("/escolhas/verificar", {
+    //         method: "POST"
+    //     }).then(resposta => {
+
+    //         if (resposta.ok) {
+
+    //             resposta.json().then(json => {
+
+    //                 console.log('até aqui foi')
+    //                 sessionStorage.nome_jogador_meuapp = json.nomeJogador;
+    //                 sessionStorage.foto_jogador_meuapp = json.fotoJogador;
+    //             });
+
+    //         } else {
+
+    //             console.log('Erro!');
+
+    //             resposta.text().then(texto => {
+    //                 console.error(texto);
+    //             });
+    //         }
+    //     });
+
+    //     return false;
+    // }
+</script>

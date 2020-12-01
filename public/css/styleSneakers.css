@@ -24,7 +24,7 @@
 
 a {
     text-decoration: none;
-    color: transparent;
+    color: black;
 }
 
 .nav-bar img {
@@ -45,7 +45,6 @@ a {
     padding: 1vh 2vw;
     font-weight: 600;
     font-size: 3vh;
-    color: black;
 }
 
 .nav-bar li:hover {
@@ -57,35 +56,6 @@ a {
 #no_change:hover {
     background-color: #274cdf;
     color: black;
-}
-
-.banner {
-    height: 84vh;
-    background-image: url(../imagem/wall-sobre.jpg);
-    background-color: black;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: 50%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-top: 8vh;
-}
-
-.container-banner {
-    opacity: 1.5;
-    width: 60vw;
-    height: 70vh;
-    background-color: black;
-    color: white;
-    font-size: 4vh;
-    margin-left: 20vw;
-    padding-top: 4vh;
-    border-radius: 5vh;
-    border: solid white 0.7vh;
-}
-
-#historia {
-    padding: 2vh 3vw;
 }
 
 .footer {

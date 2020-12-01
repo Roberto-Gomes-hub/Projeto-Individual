@@ -71,7 +71,7 @@
                     <div id="div_erroCad"></div>
                 </div>
             </div>
-            <img id="img_aguarde" src="https://i.gifer.com/3vND.gif" alt="" style="float: right; width: 25vw; margin-right: -46vw; margin-top: -40vh; visibility: hidden;">
+            <img id="img_aguarde" src="https://i.gifer.com/3vND.gif" alt="" style="float: right; width: 25vw; margin-right: -46vw; margin-top: -40vh; display: none;">
         </div>
     </div>
     <!-- FIM BANNER -->
@@ -138,14 +138,14 @@
 
     function aguardar() {
         btn_entrar.disabled = true;
-        img_aguarde.style.visibility = 'visible';
-        div_erro.style.visibility = 'hidden';
+        img_aguarde.style.display = 'block';
+        div_erro.style.display = 'none';
     }
 
     function finalizar_aguardar(resposta) {
         btn_entrar.disabled = false;
-        img_aguarde.style.visibility = 'hidden';
-        div_erro.style.visibility = 'visible';
+        img_aguarde.style.display = 'none';
+        div_erro.style.display = 'block';
         div_erro.innerHTML = resposta;
     }
 
@@ -160,7 +160,7 @@
             if (response.ok) {
                 alert('Cadastro realizado com sucesso!');
                 MostrarLogin();
-
+                finalizar_aguardarCad();
             } else {
 
                 console.log('Erro de cadastro!');
@@ -176,14 +176,14 @@
 
     function aguardarCad() {
         btn_cadastro.disabled = true;
-        img_aguarde.style.visibility='visible';
-        div_erroCad.style.visibility = 'hidden';
+        img_aguarde.style.display = 'block';
+        div_erroCad.style.display = 'none';
     }
 
     function finalizar_aguardarCad() {
         btn_cadastro.disabled = false;
-        img_aguarde.style.visibility = 'hidden';
-        div_erroCad.style.visibility = 'visible';
+        img_aguarde.style.display = 'none';
+        div_erroCad.style.display = 'none';
     }
 
 
