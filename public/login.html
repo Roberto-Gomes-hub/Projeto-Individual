@@ -31,16 +31,16 @@
                     <form id="form_login" method="post" onsubmit="return entrar()">
                         <label>Email:</label> 
                         <br>
-                        <input id="email" type="email" name="login" placeholder="exemplo@exemplo.com">
+                        <input id="emailLogin" type="email" name="login" placeholder="exemplo@dominio.com">
                         <br>
                         <label>Senha:</label> 
                         <br>
-                        <input id="senha" type="password" name="senha">
+                        <input id="senhaLogin" type="password" name="senha">
                         <br>
                         <button id="btn_entrar">Entrar</button>
                     </form>
                     <button style="margin-top: 1vh;" onclick="MostrarCadastro()">Cadastro</button>
-                    <div id="div_erro"></div>
+                    <div id="div_erro" style="color: white;"></div>
                 </div>
             </div>
         </div>
@@ -51,15 +51,15 @@
                     <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
                         <label>Usuário:</label> 
                         <br>
-                        <input id="user" name="nome">
+                        <input id="userCad" name="nome" placeholder="Roberto Gomes">
                         <br>
                         <label>Email:</label> 
                         <br>
-                        <input id="email" type="email" name="login" placeholder="exemplo@exemplo.com">
+                        <input id="emailCad" type="email" name="login" placeholder="exemplo@dominio.com">
                         <br>
                         <label>Senha:</label> 
                         <br>
-                        <input id="senha" type="password" name="senha">
+                        <input id="senhaCad" type="password" name="senha">
                         <br>
                         <label>Confirmar Senha:</label> 
                         <br>
@@ -68,7 +68,7 @@
                         <button id="btn_cadastro">Cadastrar</button>
                     </form>
                     <button style="margin-top: 1vh;" onclick="MostrarLogin()">Login</button>
-                    <div id="div_erroCad"></div>
+                    <div id="div_erroCad" style="color: white; float: right; margin-top: 15vh;"></div>
                 </div>
             </div>
             <img id="img_aguarde" src="https://i.gifer.com/3vND.gif" alt="" style="float: right; width: 25vw; margin-right: -46vw; margin-top: -40vh; display: none;">

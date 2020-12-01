@@ -31,6 +31,52 @@
     </div>
     <!-- FIM DA NAVBAR -->
 
+    <!-- CONTEUDO -->
+    <div class="banner">
+        <div class="container_sneakers">
+            <i><h1 style="font-size: 7vw; color: white;">Conheça uma seleção dos meus tênis favoritos</h1></i>
+            <div class="card-left">
+                <img src="imagem/jordan5_1.jpeg" id="jordanimg"> 
+                <div class="card-Cont">
+                    <h1>Air Jordan V</h1>
+                    <h3>"O Air Jordan 5 Retro 'Alternate Grape' oferece uma variação da coloração clássica OG da silhueta desde 1990. A parte superior, totalmente em camurça roxa, fica no topo de uma entressola de espuma preta com detalhes de dente de tubarão manchado em verde esmeralda. O mesmo tom aparece nas fechaduras de renda e na marca Jumpman no topo da língua, que é finalizada com um acabamento reflexivo que captura a luz." Esse foi meu primeiro tênis "Air Jordan" da marca Jordan, que eu tenho com máximo cuidado e apego. 
+                    </h3>
+                    <a href="https://www.artwalk.com.br/tenis-nike-air-jordan-5-retro-masculino-13602-7-500/p"><u style="float: right; margin-right: 3vw;">Ver na loja &curvearrowright;</u></a>
+                </div>
+            </div>
+
+            <div class="card-right">
+                <img src="imagem/force1_0.jpg" id="forceimg"> 
+                <div class="card-Cont">
+                    <h1>Air Force 1</h1>
+                    <h3 style="margin-top: 4vh;">"A lenda vive no Tênis Masculino Nike Air Force 1 07, uma atualização moderna do icônico AF1 que mistura o estilo clássico com detalhes novos." Esse sneaker foi a minha mais recente aquisição na black friday, é um tênis muito bonito e acredito que quando eu personaliza-lo ele ficará ainda melhor e combinará melhor com meu estilo.
+                    </h3>
+                    <a href="https://www.nike.com.br/Produto/Tnis-Nike-Air-Force-1-07-Masculino/153-169-172-25897?utm_source=googleshop&utm_medium=CPC&utm_campaing=USC&gclid=CjwKCAiA8Jf-BRB-EiwAWDtEGp6_3Dx7eK9wGlz4xfoH6lhhB-PNShUiO-myAyqMFDkJN5T6qbyfLBoClegQAvD_BwE"><u style="float: right; margin-right: 3vw;">Ver na loja &curvearrowright;</u></a>
+                </div>
+            </div>
+
+            <div class="card-left" style="height: 42vh;">
+                <img src="imagem/miles_1.png" id="milesimg" style="height: 42vh;"> 
+                <div class="card-Cont">
+                    <h1>Air Jordan I Origin Story</h1>
+                    <h3>"A marca Jordan está a celebrar o lançamento do filme "Homem-Aranha: No Universo Aranha" com uma edição especial das Air Jordan 1 Retro High OG "Origin Story". Com um design idêntico ao das sapatilhas utilizadas por Miles Morales no filme, estas AJ1 dão um toque moderno a uma paleta de cores clássica. Em semelhança à personagem de Morales, as AJ1 são conhecidas por desafiarem as regras. Tal como a máscara, as AJ1 podem ser utilizadas por qualquer um, concedendo poderes heroicos a quem as utilizar." Esse tênis veio do filmes do Spider-Man de Miles Morales, cujo o tênis se tornou uma marca registrada do herói, sendo um dos tênis que ainda pretendo adquirir um dia. 
+                    </h3>
+                    <a href="https://www.nike.com/pt/launch/t/air-jordan-1-origin-story"><u style="float: right; margin-right: 3vw;">Ver na loja &curvearrowright;</u></a>
+                </div>
+            </div>
+
+            <div class="card-right">
+                <img src="imagem/force_itachi.png"> 
+                <div class="card-Cont">
+                    <h1>Air Force 1 custom "Itachi"</h1>
+                    <h3>Esse Air Force 1 foi customizado especialmente por um frânces, ele foi inspirado no personagem "Itachi Uchiha" do anime "Naruto". Por eu gostar muito do anime eu ter acompanhado desde pequeno eu gostaria de ter uma customização como essa em um tênis meu, principalmente por ser meu personagem favorito e poruqê a customização não é feita em todo o tênis e sim é um desenho localizado.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIM CONTEUDO -->
+
     <!-- FOOTER -->
     <div class="footer">
         <div class="contato">
@@ -44,3 +90,38 @@
     </div>
 </body>
 </html>
+<script>
+    var contForce = 0;
+    var contJordan = 1;
+    var contMiles = 1;
+    change_jordan();
+    change_force();
+    change_miles();
+
+    function change_jordan(){
+        jordanimg.src = `imagem/jordan5_${contJordan}.jpeg`;
+        contJordan++;
+        if (contJordan > 5) {
+            contJordan = 1;
+        }
+        setTimeout(change_jordan, 3000);
+    }
+
+    function change_force() {
+        forceimg.src = `imagem/force1_${contForce}.jpg`;
+        contForce++;
+        if (contForce > 4) {
+            contForce = 0;
+        }
+        setTimeout(change_force, 3000);
+    }
+
+    function change_miles() {
+        milesimg.src = `imagem/miles_${contMiles}.png`
+        contMiles++;
+        if (contMiles > 4) {
+            contMiles = 1;
+        }
+        setTimeout(change_miles, 3000);
+    }
+</script>

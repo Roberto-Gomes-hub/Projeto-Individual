@@ -134,7 +134,7 @@ a {
 
 .card_Noticia {
     width: 20vw;
-    height: 50vh;
+    height: 55vh;
     padding: 3vh 2vw;
     margin-left: 2vw;
     background-color: black;
@@ -152,6 +152,10 @@ a {
 }
 
 .card_Noticia u:hover {
+    color: white;
+}
+
+.voltar_h1:hover {
     color: white;
 }
 
